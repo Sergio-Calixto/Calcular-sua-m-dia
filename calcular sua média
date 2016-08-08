@@ -1,0 +1,40 @@
+# Calcular média
+opcao = ""
+n_1 = 00.00
+n_2 = 00.00
+n_3 = 00.00
+
+while opcao != "x":
+    
+    print(" ------------------------------ ")
+    print("|             MENU             |")
+    print("|   [1] Cadastrar notas        |")
+    print("|   [2] Calcular média         |")
+    print("|   [3] Situação               |")
+    print("|   [x] Sair                   |")
+    print(" ------------------------------ ")
+
+    opcao = input("Digite a opção desejada: ")
+    
+    if opcao == "1":
+        n_1 = float(input("Caro aluno, digite sua primeira nota: "))
+        n_2 = float(input("Caro aluno, digite sua segunda nota: "))
+        n_3 = float(input("Caro aluno, digite sua terceira nota: "))
+
+    elif opcao == "2":
+        media = (n_1+n_2+n_3)/3
+        if media == 0:
+            print("Caro usuario por favor cadastre as notas, obrigado!") 
+        else :
+            media = (n_1+n_2+n_3)/3
+            print("Caro aluno você obteve média igual a: ", media)
+
+    if opcao == "3":
+        if media == 0:
+            print("Caro usuario por favor cadastre as notas, obrigado!") 
+        if media >= 7:
+            print("Você foi aprovado(a), parabéns!")
+        elif media >= 4:
+            print("Você está na final, boa sorte!")
+        else:
+            print("Você foi reprovado")
